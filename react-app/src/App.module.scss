@@ -6,7 +6,7 @@ header {
 }
 
 .navBar {
-    padding: 20px 0;
+    padding: 20px 0 10px;
     width: 90%;
     margin: auto;
     @include flexbox(flex, space-between, baseline);
