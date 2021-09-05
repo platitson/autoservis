@@ -9,8 +9,19 @@ import {
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Feedbacks from './components/Feedbacks/Feedbacks';
+import { Translation } from './utils/languageSwith';
 
 function App() {
+
+  function translate(event) {
+      const translation = new Translation();
+      translation.init();
+      translation.initPassTranslationEventListener();
+      event.preventDefault();
+      const myEvent = new CustomEvent('passTranslation', { detail: event.target.dataset["languageKey"] });
+      window.dispatchEvent(myEvent);
+  }
+
   return (
     <Router>
       <header>
@@ -29,8 +40,8 @@ function App() {
             </ul>
           </nav>
           <div>
-            <NavLink to="#" data-lang="english" className={styles.langLink}>EN</NavLink>
-            <NavLink to="#" data-lang="czech" className={styles.langLink}>CZ</NavLink>
+            <div data-language-key="EN" onClick={translate} className={styles.langLink}>EN</div>
+            <div data-language-key="CZ" onClick={translate} className={styles.langLink}>CZ</div>
           </div>
         </div>
       </header>

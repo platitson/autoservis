@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Translation } from './utils/languageSwith';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -9,3 +10,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+const t = new Translation();
+t.init();
+t.initPassTranslationEventListener();

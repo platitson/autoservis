@@ -50,13 +50,13 @@ function Feedbacks() {
 
     return (
         <div className={styles.feedbacks}>
-            <h1>Feedbacks</h1>
+            <h1 data-key="feedbacks">Feedbacks</h1>
             <form onSubmit={onSubmitHandler}>
-                <label>Your name:</label>
-                <input name="name" placeholder="Your name" onKeyDown={clearErrorBorders} />
-                <label>Your feedback:</label>
-                <textarea name="feedback" placeholder="Feedback" onKeyDown={clearErrorBorders} />
-                <button type="submit">Add</button>
+                <label data-key='name'>Your name:</label>
+                <input name="name" onKeyDown={clearErrorBorders} />
+                <label data-key='yfeedback'>Your feedback:</label>
+                <textarea name="feedback" onKeyDown={clearErrorBorders} />
+                <button type="submit" data-key='add'>Add</button>
             </form>
             {(feedbacks.length > 0) ? <h3>Recent feedbacks</h3> : ''}
             {feedbacks.map((item, index) => {
