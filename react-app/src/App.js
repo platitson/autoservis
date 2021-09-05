@@ -9,17 +9,17 @@ import {
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Feedbacks from './components/Feedbacks/Feedbacks';
-import { Translation } from './utils/languageSwith';
+import { Translation } from './utils/languageSwitch';
 
 function App() {
 
   function translate(event) {
-      const translation = new Translation();
-      translation.init();
-      translation.initPassTranslationEventListener();
-      event.preventDefault();
-      const myEvent = new CustomEvent('passTranslation', { detail: event.target.dataset["languageKey"] });
-      window.dispatchEvent(myEvent);
+    const translation = new Translation();
+    translation.init();
+    translation.initPassTranslationEventListener();
+    event.preventDefault();
+    const myEvent = new CustomEvent('passTranslation', { detail: event.target.dataset["languageKey"] });
+    window.dispatchEvent(myEvent);
   }
 
   return (
