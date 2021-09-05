@@ -1,9 +1,31 @@
 // Variables usage (see them also in App.module.scss)
 $main-color: rgb(22, 63, 153);
+$main-hover-color: rgb(74, 106, 196);
 
 // Mixins usage (see them also in App.module.scss)
 @mixin flexbox ($display, $jcontent, $aitems) {
     display: $display;
     justify-content: $jcontent;
     align-items: $aitems;
+}
+
+// Samples usage (see them also in Feedbacks.module.scss)
+%input-and-button-sizes {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    margin: 7px 0 20px;
+    border-radius: 5px;
+}
+
+%buttons {
+    @extend %input-and-button-sizes;
+    background-color: $main-color;
+        border: none;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background-color: $main-hover-color;
+        }
 }
