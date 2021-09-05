@@ -1,0 +1,9 @@
+// Variables usage (see them also in App.module.scss)
+$main-color: rgb(22, 63, 153);
+
+// Mixins usage (see them also in App.module.scss)
+@mixin flexbox ($display, $jcontent, $aitems) {
+    display: $display;
+    justify-content: $jcontent;
+    align-items: $aitems;
+}

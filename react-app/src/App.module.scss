@@ -1,0 +1,40 @@
+@import './abstracts/abstracts.scss';
+
+header {
+    margin-bottom: 30px;
+    background-color: $main-color;
+}
+
+.navBar {
+    padding: 20px 0;
+    width: 90%;
+    margin: auto;
+    @include flexbox(flex, space-between, baseline);
+    & li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.selectedNavLink {
+    font-weight: bold;
+}
+
+.langLink {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    &:first-child {
+        padding-right: 10px;
+        border-right: 1px solid white;
+    }
+    &:last-child {
+        padding-left: 10px;
+    }
+}
